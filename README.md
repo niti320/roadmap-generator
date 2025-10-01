@@ -4,12 +4,6 @@ A **dynamic roadmap generator** built with **Next.js** and **TailwindCSS**. This
 
 ---
 
-## 🔗 Live Demo
-
-*(Add link if hosted online)*
-
----
-
 ## 🛠 Features
 
 - Add, edit, and delete steps and sub-steps in a visual tree structure
@@ -24,13 +18,14 @@ A **dynamic roadmap generator** built with **Next.js** and **TailwindCSS**. This
 ## 📸 Screenshots
 
 **Home / Roadmap View**  
-![Home Screenshot](./screenshots/home.png)
+![Home Screenshot](./screenshots/s1.png)
+
+**Roadmap**  
+![Roadmap Screenshot](./screenshots/s2.png)
 
 **Editing a Step**  
-![Edit Step Screenshot](./screenshots/edit-step.png)
+![Edit Step Screenshot](./screenshots/s0.png)
 
-**Export as PDF**  
-![PDF Screenshot](./screenshots/pdf-export.png)
 
 ---
 
