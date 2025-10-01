@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Roadmap Generator 🚀
 
-## Getting Started
+A **dynamic roadmap generator** built with **Next.js** and **TailwindCSS**. This app allows you to create, organize, and visualize steps and sub-steps in a hierarchical roadmap. Perfect for planning learning paths, projects, or personal goals.
 
-First, run the development server:
+---
+
+## 🔗 Live Demo
+
+*(Add link if hosted online)*
+
+---
+
+## 🛠 Features
+
+- Add, edit, and delete steps and sub-steps in a visual tree structure
+- Interactive nodes with customizable titles and descriptions
+- Export your roadmap as a clean, printable PDF
+- Smooth UI with depth-based color coding for clarity
+- Fully client-side, no backend required
+- Responsive design for both desktop and mobile
+
+---
+
+## 📸 Screenshots
+
+**Home / Roadmap View**  
+![Home Screenshot](./screenshots/home.png)
+
+**Editing a Step**  
+![Edit Step Screenshot](./screenshots/edit-step.png)
+
+**Export as PDF**  
+![PDF Screenshot](./screenshots/pdf-export.png)
+
+---
+
+## 🧰 Tech Stack
+
+- **Frontend:** Next.js 13, React, TailwindCSS  
+- **Icons & UI:** Lucide-react, Radix UI  
+- **State Management:** React `useState`, `immer` for immutable updates  
+- **Forms & Validation:** React Hook Form + Zod  
+- **PDF Export / Print:** Browser `window.print()`  
+
+---
+
+## ⚡ Installation & Setup
 
 ```bash
+# Clone the repo
+git clone https://github.com/niti320/roadmap-generator.git
+cd roadmap-generator
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
