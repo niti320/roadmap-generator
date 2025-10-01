@@ -1,26 +1,117 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 60 56% 91%;
+    --foreground: 240 10% 3.9%;
+    --card: 60 50% 95%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 60 50% 95%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 180 100% 25%;
+    --primary-foreground: 180 100% 95%;
+    --secondary: 60 40% 85%;
+    --secondary-foreground: 240 10% 3.9%;
+    --muted: 60 40% 88%;
+    --muted-foreground: 240 5.9% 35%;
+    --accent: 47 100% 69%;
+    --accent-foreground: 47 100% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 60 30% 80%;
+    --input: 60 30% 82%;
+    --ring: 180 100% 25%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 8%; /* format is <hue> <saturation> <lightness> */
+    --foreground: 60 56% 91%;
+    --card: 0 0% 12%;
+    --card-foreground: 60 56% 91%;
+    --popover: 240 10% 6%;
+    --popover-foreground: 60 56% 91%;
+    --primary: 48 100% 63%; /*  in HSL = 48 100% 63% */
+    --primary-foreground: 180 100% 10%;
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 60 56% 91%;
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 47 90% 60%;
+    --accent-foreground: 47 100% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 15%;
+    --input: 240 5% 15%;
+    --ring: 180 80% 65%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+#printable-roadmap{display: none;}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #printable-roadmap, #printable-roadmap * {
+    visibility: visible;
+  }
+
+  #printable-roadmap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+  .print-step {
+    border: 1px solid #333;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    page-break-inside: avoid;
+    background-color: #1b1b1b;
+  }
+
+  .print-step > .step-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .print-step > .step-description {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .print-substeps {
+    margin-left: 20px;
+  }
+  #printable-roadmap{display: block;}
+
+  button {
+    display: none;
+  }
 }
